@@ -29,7 +29,7 @@ class ArticalRepository implements RepositoryInterface
     // update record in the database
     public function update(array $data, $id)
     {
-        $record = $this->findOrFail($id);
+        $record = $this->find($id);
         return $record->update($data);
     }
 
@@ -42,7 +42,7 @@ class ArticalRepository implements RepositoryInterface
     // show the record with the given id
     public function find($id)
     {
-        return $this->model->findOrFail($id);
+        return $this->model->find($id);
     }
 
     // Get the associated model
