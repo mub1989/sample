@@ -29,13 +29,13 @@ class ArticalTest extends TestCase
 
     public function testUpdateArtical()
     {
-        $insertData = factory(Artical::class,1)->create();
         $data = [
             'title' => 'test',
             'description' => 'testtttttt',
             'body' => 'test',
+            '_method' => 'PUT',
         ];
-        $this->json('PUT','api/articals/'.$insertData->id,$data);
+        $this->json('PUT','api/articals/2',$data);
         $this->assertTrue(true);
     }
 }
