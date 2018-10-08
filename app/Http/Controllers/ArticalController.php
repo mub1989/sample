@@ -23,7 +23,7 @@ class ArticalController extends Controller
     }
 
     /**
-     * Display a listing of the resource.
+     * Display a listing of the artical.
      *
      * @return \Illuminate\Http\Response
      */
@@ -33,7 +33,7 @@ class ArticalController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Show the form for creating a new artical.
      *
      * @return \Illuminate\Http\Response
      */
@@ -43,7 +43,7 @@ class ArticalController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Store a newly created artical.
      *
      * @param  ArticalRequest $request
      * @return \Illuminate\Http\Response
@@ -55,7 +55,7 @@ class ArticalController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Display the specified artical.
      *
      * @param  int $id
      * @return \Illuminate\Http\Response
@@ -71,7 +71,7 @@ class ArticalController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Show the form for editing the specified artical.
      *
      * @param  int $id
      * @return \Illuminate\Http\Response
@@ -82,7 +82,7 @@ class ArticalController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Update the specified artical.
      *
      * @param  ArticalRequest $request
      * @param  int $id
@@ -95,7 +95,7 @@ class ArticalController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Remove the specified artical from storage.
      *
      * @param  int $id
      * @return \Illuminate\Http\Response

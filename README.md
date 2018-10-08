@@ -23,6 +23,51 @@ Run the below code to test the unit test inside the project folder
 ```
  php vendor/phpunit/phpunit/phpunit
  ``` 
+ Test code form artical creation and update
+ ```
+ <?php
+ 
+ namespace Tests\Unit;
+ 
+ use App\Models\Artical;
+ use Tests\TestCase;
+ use Illuminate\Foundation\Testing\WithFaker;
+ use Illuminate\Foundation\Testing\RefreshDatabase;
+ 
+ class ArticalTest extends TestCase
+ {
+     //use RefreshDatabase;
+     /**
+      * A basic test example.
+      *
+      * @return void
+      */
+     public function testCreateArtical()
+     {
+         //factory(Artical::class,3)->make();
+         $data = [
+             'title' => 'test',
+             'description' => 'test',
+             'body' => 'test',
+         ];
+         $this->json('POST','api/articals',$data);
+         $this->assertTrue(true);
+     }
+ 
+     public function testUpdateArtical()
+     {
+         $data = [
+             'title' => 'test',
+             'description' => 'testtttttt',
+             'body' => 'test',
+             '_method' => 'PUT',
+         ];
+         $this->json('PUT','api/articals/2',$data);
+         $this->assertTrue(true);
+     }
+ }
+
+ ```
 
 ###Routes used for perform action
 Below routes used under routes folde api.php
@@ -62,7 +107,7 @@ Perform crud operation from `ArticalController.php`
      }
  
      /**
-      * Display a listing of the resource.
+      * Display a listing of the artical.
       *
       * @return \Illuminate\Http\Response
       */
@@ -72,7 +117,7 @@ Perform crud operation from `ArticalController.php`
      }
  
      /**
-      * Show the form for creating a new resource.
+      * Show the form for creating a new artical.
       *
       * @return \Illuminate\Http\Response
       */
@@ -82,7 +127,7 @@ Perform crud operation from `ArticalController.php`
      }
  
      /**
-      * Store a newly created resource in storage.
+      * Store a newly created artical.
       *
       * @param  ArticalRequest $request
       * @return \Illuminate\Http\Response
@@ -94,7 +139,7 @@ Perform crud operation from `ArticalController.php`
      }
  
      /**
-      * Display the specified resource.
+      * Display the specified artical.
       *
       * @param  int $id
       * @return \Illuminate\Http\Response
@@ -110,7 +155,7 @@ Perform crud operation from `ArticalController.php`
      }
  
      /**
-      * Show the form for editing the specified resource.
+      * Show the form for editing the specified artical.
       *
       * @param  int $id
       * @return \Illuminate\Http\Response
@@ -121,7 +166,7 @@ Perform crud operation from `ArticalController.php`
      }
  
      /**
-      * Update the specified resource in storage.
+      * Update the specified artical.
       *
       * @param  ArticalRequest $request
       * @param  int $id
@@ -134,7 +179,7 @@ Perform crud operation from `ArticalController.php`
      }
  
      /**
-      * Remove the specified resource from storage.
+      * Remove the specified artical.
       *
       * @param  int $id
       * @return \Illuminate\Http\Response
