@@ -23,7 +23,7 @@ Run the below code to test the unit test inside the project folder
 ```
  php vendor/phpunit/phpunit/phpunit
  ``` 
- Test code form artical creation and update
+ Test code for artical creation and update
  ```
  <?php
  
