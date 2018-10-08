@@ -1,7 +1,7 @@
 ## Artical CRUD
 Complete CRUD operation for Articals using laravel repository design pattern
 
-###Installing
+### Installing
 Download the project from Git hub
 ```
 git clone https://github.com/mub1989/sample.git
@@ -13,12 +13,12 @@ git clone https://github.com/mub1989/sample.git
  php artisan migrate --database=sampletest
   ```
 
- #####Databases
+ ##### Databases
  ```
  sample
  sampletest(This database for testing purpose)
  ``` 
-###Unit Test
+### Unit Test
 Run the below code to test the unit test inside the project folder
 ```
  php vendor/phpunit/phpunit/phpunit
@@ -69,7 +69,7 @@ Run the below code to test the unit test inside the project folder
 
  ```
 
-###Routes used for perform action
+### Routes used for perform action
 Below routes used under routes folde api.php
 ```
  Route::get('articals', 'ArticalController@index');
@@ -79,7 +79,7 @@ Below routes used under routes folde api.php
  Route::delete('articals/{article}', 'ArticalController@destroy');
  ```
  
- ####Codes 
+ #### Codes 
 Perform crud operation from `ArticalController.php`
  ```
  <?php
