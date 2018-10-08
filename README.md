@@ -23,7 +23,7 @@ Run the below code to test the unit test inside the project folder
 ```
  php vendor/phpunit/phpunit/phpunit
  ``` 
- Test code form artical creation and update
+ Test code for artical creation and update
  ```
  <?php
  
@@ -68,9 +68,10 @@ Run the below code to test the unit test inside the project folder
  }
 
  ```
-
+ 
 ### Routes used to perform action
 Below routes used under routes folder `api.php`
+
 ```
  Route::get('articals', 'ArticalController@index');
  Route::get('articals/{article}', 'ArticalController@show');
