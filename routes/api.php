@@ -22,3 +22,8 @@ Route::get('articals/{article}', 'ArticalController@show');
 Route::post('articals', 'ArticalController@store');
 Route::put('articals/{article}', 'ArticalController@update');
 Route::delete('articals/{article}', 'ArticalController@destroy');
+
+Route::get('runQueue', function (){
+    $job = \App\Jobs\Sample::dispatch()->onQueue('gl');
+});
+
